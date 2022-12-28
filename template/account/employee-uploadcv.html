@@ -1,0 +1,47 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- HOME -->
+<section class="section-hero overlay inner-page bg-image"
+  style="background-image: url('{% static 'images/hero_1.jpg' %}');" id="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-white font-weight-bold">Employee/Upload CV</h1>
+        <div class="custom-breadcrumbs">
+          <a href="{% url 'jobapp:home' %}">Home</a> <span class="mx-2 slash">/</span>
+          <span class="text-white"><strong>Sign Up</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mb-5">
+        <h2 class="mb-4 text-center">Upload CV</h2>
+        <div class="row form-group" >
+            <div class="col-md-12">
+              <div class="form-check form-check-inline" >
+  <form method="post" enctype="multipart/form-data" class="p-4 border rounded" >
+    {% csrf_token %}
+    <h3>Upload</h3><input type="file" name="document">
+    <button type="submit" class="btn px-4 btn-primary text-white">Upload file</button>
+  </form>
+  {% if url %}
+    <p>Uploaded file: <a href="{{ url }}">{{ url }}</a></p>
+  {% endif %}
+              </div>
+            </div>
+          </div>
+
+    </div>
+  </div>
+    </div>
+</section>
+
+{% endblock %}
