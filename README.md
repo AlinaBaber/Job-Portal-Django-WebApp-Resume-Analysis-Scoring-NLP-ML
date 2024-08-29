@@ -18,12 +18,14 @@ This project is a Django-based web application that focuses on resume analysis a
 In the competitive job market, ensuring that a resume stands out is crucial. This web application automates the process of resume screening by leveraging NLP and machine learning techniques. It analyzes the content of resumes, compares them against job descriptions, and assigns a relevance score. The core of the application is built using Django, with backend processing powered by NLP and LSTM-based models.
 
 ## Features
-
+- **Employer/Candidate Account**: Users can create account as employer or Candidate add their information.
+- **Employer Dasboard**: Employer can post a job with job description and can create Interview quiz.
+- **Candidate Dasboard**: Candidate can add information and search and apply for job and give Interview quiz of that job.
 - **Resume Upload**: Users can upload resumes in various formats (PDF, DOCX, etc.).
 - **Job Description Matching**: The system compares the uploaded resume with predefined job descriptions.
 - **NLP-Based Analysis**: Text analysis is performed using NLP techniques to extract relevant features.
 - **LSTM-Based Classification**: A Long Short-Term Memory (LSTM) neural network model classifies resumes based on their relevance.
-- **Scoring System**: Resumes are scored based on how well they match the job description.
+- **Scoring System**: Resumes are scored based on how well they match the job description and what is the score of the interview quiz given by candidate.
 - **User-Friendly Interface**: A simple and intuitive web interface built with Django.
 
 ## Technology Stack
